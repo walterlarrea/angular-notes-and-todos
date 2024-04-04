@@ -29,11 +29,11 @@
       "Segoe UI Emoji", "Segoe UI Symbol";
   }
 
-  main {
+  header {
     width: 100%;
     min-height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem;
     box-sizing: inherit;
@@ -41,16 +41,8 @@
   }
 </style>
 
-<main>
-  <h1>Notes & Todos</h1>
-</main>
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div>
+  <app-header />
+</div>
 
 <router-outlet />
