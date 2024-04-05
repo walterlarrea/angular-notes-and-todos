@@ -1,0 +1,21 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+img {
+  border-radius: 100%;
+  width: 60px;
+}
+
+span {
+  font-size: 1.3rem;
+}
