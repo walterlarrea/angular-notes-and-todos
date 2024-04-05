@@ -1,4 +1,4 @@
-import { ApplicationRef, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import type { GoogleAuthSession } from '../../models/session.model';
 import { BehaviorSubject, Observable } from 'rxjs';
 
@@ -10,12 +10,16 @@ export class SessionService {
     {} as GoogleAuthSession
   );
 
-  constructor(private ref: ApplicationRef) {
+  constructor() {
     this.checkSession(sessionStorage.getItem('gSession'));
   }
 
-  public getSession(): Observable<GoogleAuthSession> {
+  public getSessionObservable(): Observable<GoogleAuthSession> {
     return this.googleOAuthSession$.asObservable();
+  }
+
+  public getCurrentSession(): GoogleAuthSession {
+    return this.googleOAuthSession$.value;
   }
 
   public storeSession(newSession: GoogleAuthSession): void {
