@@ -1,0 +1,10 @@
+<b>Create new note: </b>
+<form [formGroup]="noteForm" (ngSubmit)="onSubmitForm()">
+  <label for="note-title">Title: </label>
+  <input id="note-title" type="text" formControlName="title" />
+
+  <label for="note-content">Content: </label>
+  <input id="note-content" type="text" formControlName="content" />
+
+  <button type="submit">Submit</button>
+</form>
