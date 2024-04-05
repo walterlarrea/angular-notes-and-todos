@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { NotesComponent } from '../notes/notes.component';
 
 @Component({
   selector: 'dashboard',
   standalone: true,
-  imports: [],
+  imports: [NotesComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
 })

@@ -27,7 +27,6 @@ export class AppLoginComponent implements OnInit {
   }
 
   googleSignIn = (token: CredentialResponse) => {
-    console.log('signin', token);
     try {
       const decodedSession = jwtDecode<any>(token.credential);
 

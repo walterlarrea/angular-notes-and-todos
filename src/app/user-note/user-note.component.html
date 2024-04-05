@@ -1,0 +1,30 @@
+<div class="card__container" *ngIf="note">
+  <div class="card_title__container">
+    <div
+      id="note-title"
+      class="title"
+      role="textbox"
+      aria-multiline="false"
+      [contentEditable]="editable"
+      (keyup)="handleUpdate($event, 'title')"
+    >
+      {{ note.title }}
+    </div>
+    <button
+      class="card__delete_button"
+      (click)="deleteNote(note.id)"
+      title="Delete this note"
+    >
+      X
+    </button>
+  </div>
+  <div
+    id="note-content"
+    role="textbox"
+    aria-multiline="true"
+    [contentEditable]="editable"
+    (keyup)="handleUpdate($event, 'content')"
+  >
+    <p>{{ note.content }}</p>
+  </div>
+</div>

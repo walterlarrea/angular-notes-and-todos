@@ -2,6 +2,10 @@
   <h1>Notes & Todos</h1>
 
   <div>
-    <span>User logged: {{ (currentSession$ | async)?.name }}</span>
+    <span>{{ (currentSession$ | async)?.name }}</span>
+    <img
+      [src]="(currentSession$ | async)?.pictureUrl"
+      alt="Profile picture of {{ (currentSession$ | async)?.name }}"
+    />
   </div>
 </header>
