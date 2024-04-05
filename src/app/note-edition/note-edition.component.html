@@ -1,0 +1,8 @@
+<dialog (mousedown)="closeDialog($event)">
+  <user-note
+    *ngIf="note?.id"
+    [note]="decNote"
+    [editable]="true"
+    (updateNoteEvent)="updateNoteLocally($event)"
+  />
+</dialog>
