@@ -1,0 +1,17 @@
+<section>
+  <h3>Notes</h3>
+  <div class="form__container">
+    <new-note-form />
+  </div>
+  <div class="notes__container">
+    <user-note
+      *ngFor="let note of notes$ | async; trackBy: trackByFn"
+      [note]="note"
+      (click)="selectNoteToEdit($event, note)"
+    />
+  </div>
+  <note-edition
+    [note]="selectedNote"
+    (closeDialogEvent)="deselectNoteToEdit()"
+  />
+</section>
