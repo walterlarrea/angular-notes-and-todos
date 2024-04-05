@@ -13,7 +13,7 @@ import { AsyncPipe } from '@angular/common';
 })
 export class HeaderComponent {
   currentSession$: Observable<GoogleAuthSession> =
-    this.sessionService.getSession();
+    this.sessionService.getSessionObservable();
 
   constructor(private sessionService: SessionService) {}
 }
