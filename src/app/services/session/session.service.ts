@@ -22,6 +22,10 @@ export class SessionService {
     return this.googleOAuthSession$.value;
   }
 
+  public isAuthenticated(): boolean {
+    return Boolean(this.googleOAuthSession$.value?.id);
+  }
+
   public storeSession(newSession: GoogleAuthSession): void {
     this.googleOAuthSession$.next(newSession);
     sessionStorage.setItem('gSession', JSON.stringify(newSession));
