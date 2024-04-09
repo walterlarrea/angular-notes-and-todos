@@ -3,6 +3,7 @@ import { AppLoginComponent } from './app-login/app-login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 export const routes: Routes = [
-  { path: 'login', component: AppLoginComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'login', component: AppLoginComponent },
+  { path: '', component: AppLoginComponent },
 ];
